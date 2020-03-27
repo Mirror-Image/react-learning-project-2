@@ -46,7 +46,7 @@ export const GithubState = ({children}) => {
     setLoading()
 
     const response = await axios.get(
-      withCreds(`https://api.github.com/search/users/${name}?`)
+      withCreds(`https://api.github.com/users/${name}?`)
     )
 
     dispatch({
@@ -59,7 +59,7 @@ export const GithubState = ({children}) => {
     setLoading()
 
     const response = await axios.get(
-      withCreds(`https://api.github.com/search/users/${name}/repos?per_page=5&`)
+      withCreds(`https://api.github.com/users/${name}/repos?per_page=5&`)
     )
 
     dispatch({
